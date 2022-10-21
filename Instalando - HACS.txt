@@ -1,0 +1,37 @@
+###Container
+
+- Open a terminal
+
+- Go inside the container with:
+$ docker exec -it homeassistant bash
+
+- Run the HACS download script
+$ wget -O - https://get.hacs.xyz | bash -
+
+- Saida do container
+# Exit
+
+- HACS será baixando na pasta ./Config/custom_components
+
+- Acesse e entre no home assistant:
+http://192.168.0.2:8123/
+
+Vá em: Configurações/Sistema "Reiniciar"
+
+- Acesse e entre no home assistant:
+http://192.168.0.2:8123/
+
+Vá em: Configurações/Dispositivos & Serviços/Adicionar integração:
+
+Procurar: HACS
+
+Marcas todas as opções e "enviar"
+
+Copie o código gerado e entre no github
+
+Insira o código e "Authorize hacs"
+
+Volte no homeassistant e pressione "Terminar"
+
+HACS deverá estar aparecendo na barra lateral
+
