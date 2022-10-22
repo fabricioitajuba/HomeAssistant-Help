@@ -1,0 +1,46 @@
+-- Home assistant
+
+Configurações/Dispositivos & serviços/Entidades auxiliares/Criar ajudante
+
+"Alternar"/Nome: Ligar teste/Ícone: mdi:account/Criar
+
+"Visão geral"/"Entidades Auxiliares"/ o botão foi criado
+
+Configurações/Dispositivos & Serviços/Entidades auxiliares/
+Copie o ID da entidade
+
+- Se estiver executando a integração pela primeira vez, copie e cole o seguinte texto no final do arquivo
+configuration.yaml no diretório /config do homeassistant
+
+emulated_hue:
+  host_ip: <IP do seu Home Assistant>
+  listen_port: 80
+  expose_by_default: false
+  entities:
+    switch.entity1:
+      hidden: false
+    switch.entity2:
+      hidden: false
+      
+faça as seguintes alterações:
+
+emulated_hue:
+  host_ip: 192.168.0.2
+  listen_port: 80
+  expose_by_default: false
+  entities:
+    input_boolean.ligar_teste:
+      hidden: false
+      
+Se for incluir mais uma rotina, adicione mais um:
+
+    switch.(nome da entidade)
+      hidden: false
+
+Configurações/Sistema/Reiniciar
+
+
+Na alexa dizer "Alexa encontrar novos dispositivos"
+
+Diga "Alexa ligar botão teste" para ligar
+Diga "Alexa desligar botão teste" para desligar
